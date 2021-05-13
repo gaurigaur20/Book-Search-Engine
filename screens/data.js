@@ -11,7 +11,7 @@ export default function Data({src,buy, navigation }){
 
     <View>
         
-      <Pressable onPress={()=>navigation.navigate('Description',{URL: url.buy})} >
+      <Pressable onPress={()=>navigation.navigate('Description',{URL: url.buy})} style={{display:"flex",alignItems:"center"}}>
 
         <Image source={{uri: sour.src}}
         style={{ width: 128,

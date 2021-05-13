@@ -27,7 +27,6 @@ export default function Home({navigation,route}){
         setSearching(true);
         const data = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&key=AIzaSyDO4pA9zuCWzTvl3dsgSKBPve2GlRJKiZc&maxResults=40`).then(res=>res.json(), rej=> ({totalItems:0,err:rej}));
         
-        console.log(data);
 
         setSearching(false);
 
@@ -72,7 +71,7 @@ export default function Home({navigation,route}){
                 <TextInput style={{margin: 20,}} onChangeText={text => setSearch(text)} value={search} placeholder="Find your favourite books"/>
 
                 <View >
-                    <Button title="click me"  onPress={getSearch}/>
+                    <Button title="Search"  onPress={getSearch}/>
                 </View>
 
                 <ActivityIndicator animating={searching} />  
